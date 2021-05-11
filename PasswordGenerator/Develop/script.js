@@ -9,8 +9,8 @@ var i;
 function writePassword() {
   //var password = generatePassword();
   //var passwordText = document.querySelector("#password");
-
   //passwordText.value = password;
+
 
 }
 function btnPress(){
@@ -20,16 +20,18 @@ function btnPress(){
   numbers();
   specialcharacters();
   creation();
-  console.log(randomGenerator.toString())
+  //console.log(pass.toString())
   //console.log(randomGenerator.toString())
-  //console.log(i);
+  
 }
 
 function creation(){
-  for(var j; j < i; j++){
-    pass.push(randomGenerator[Math.floor(Math.random() * i)]);
+  for(var j = 0; j < i; j++){
+    var x = randomGenerator[Math.floor(Math.random() * i)];
+    console.log("My numbers/ letters are: " + x)
   }
 }
+
 function howLong(){
 
     i = prompt("How long do you want your password");
@@ -37,61 +39,59 @@ function howLong(){
       alert("Try again");
       howLong(); //recursion
     }
-    
+    console.log("My password is: " + i + " characters long!");
 }
 
-
-
 function lowercase(){
-if(confirm("Do you want lowercase letters?"))
+if(confirm("Do you want lowercase letters?") == true)
   {
-    console.log("Yes")
+    console.log("I want lowercase letters!")
     randomGenerator.push(["a", "b", "c", "d", "e", "f", "g", "h",
      "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
       "u", "v", "w", "x", "y", "z"]);
   }
   else
   {
-    console.log("No")
+    console.log("No lowercase letters")
   }
 }
 
 function uppercase(){
-  if(confirm("Do you want uppercase letters?"))
+  if(confirm("Do you want uppercase letters?") == true)
   {
-    console.log("Yes")
-    randomGenerator.push(["A", "B", "C", "D", "E", "F", "G", 
+    console.log("I want uppercase letters!")
+    randomGenerator.push("A", "B", "C", "D", "E", "F", "G", 
     "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", 
-    "T", "U", "V", "W", "X", "Y", "Z"]);
+    "T", "U", "V", "W", "X", "Y", "Z");
   }
   else
   {
-    console.log("No")
+    console.log("No uppercase letters")
   }
 }
 
 function numbers(){
-  if(confirm("Do you want special characters letters?"))
+  if(confirm("Do you want numbers?") == true)
   {
-    console.log("Yes")
-    randomGenerator.push("1","2","3","4","5","6","7","8","9")
+    console.log("I want numbers!")
+    randomGenerator.push("1", "2", "3", "4", "5", "6", "7", "8", "9")
   }
   else
   {
-    console.log("No")
+    console.log("No numbers")
   }
 }
 
 function specialcharacters(){
-  if(confirm("Do you want special characters letters?"))
+  if(confirm("Do you want special characters letters?") == true)
   {
-    console.log("Yes")
-    randomGenerator.push(["!",'"',"#","$","%","^","&","'","*","(",")","*","+",",","-",".","/",":",";","<","?","@","[",
-                          "\\" , "]", "^","_","`","{", "|", "}", "~"]); // use \\ for one \
+    console.log("I want special characters!")
+    randomGenerator.push("!", '"', "#", "$", "%", "^", "&", "'", "*", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", 
+    "<", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"); // use \\ for one \
   }
   else
   {
-    console.log("No")
+    console.log("No special letters")
   }
 }
 
