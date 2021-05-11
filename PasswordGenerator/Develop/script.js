@@ -2,6 +2,7 @@
 //lowercase, uppercase, numbers, special characters
 var generateBtn = document.querySelector("#generate");
 var randomGenerator = [];
+var i;
 
 // Write password to the #password input
 function writePassword() {
@@ -18,17 +19,15 @@ function btnPress(){
   numbers();
   specialcharacters();
   //console.log(randomGenerator.toString())
+  //console.log(i);
 }
 
 function howLong(){
 
-    var i = prompt("How long do you want your password");
+    i = prompt("How long do you want your password");
     if(i < 8 || i > 128){
       alert("Try again");
-      howLong();
-    }
-    else{
-      
+      howLong(); //recursion
     }
     
 }
