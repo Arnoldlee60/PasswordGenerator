@@ -22,13 +22,14 @@ function btnPress(){
   creation();
   //console.log(pass.toString())
   //console.log(randomGenerator.toString())
-  
+  console.log("Password at the end: " + pass.toString());
 }
 
 function creation(){
   for(var j = 0; j < i; j++){
-    var x = randomGenerator[Math.floor(Math.random() * i)];
-    console.log("My numbers/ letters are: " + x)
+    var x = randomGenerator[Math.floor(Math.random() * i)]; 
+    //console.log("My numbers/ letters are: " + x)
+    pass.push(x);
   }
 }
 
@@ -46,9 +47,10 @@ function lowercase(){
 if(confirm("Do you want lowercase letters?") == true)
   {
     console.log("I want lowercase letters!")
-    randomGenerator.push(["a", "b", "c", "d", "e", "f", "g", "h",
+    randomGenerator.push("a", "b", "c", "d", "e", "f", "g", "h",
      "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
-      "u", "v", "w", "x", "y", "z"]);
+      "u", "v", "w", "x", "y", "z");
+      console.log("String so far: " + randomGenerator.toString());
   }
   else
   {
@@ -63,6 +65,7 @@ function uppercase(){
     randomGenerator.push("A", "B", "C", "D", "E", "F", "G", 
     "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", 
     "T", "U", "V", "W", "X", "Y", "Z");
+    console.log("String so far: " + randomGenerator.toString());
   }
   else
   {
@@ -75,6 +78,7 @@ function numbers(){
   {
     console.log("I want numbers!")
     randomGenerator.push("1", "2", "3", "4", "5", "6", "7", "8", "9")
+    console.log("String so far: " + randomGenerator.toString());
   }
   else
   {
@@ -88,6 +92,7 @@ function specialcharacters(){
     console.log("I want special characters!")
     randomGenerator.push("!", '"', "#", "$", "%", "^", "&", "'", "*", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", 
     "<", "?", "@", "[", "\\", "]", "^", "_", "`", "{", "|", "}", "~"); // use \\ for one \
+    console.log("String so far: " + randomGenerator.toString());
   }
   else
   {
