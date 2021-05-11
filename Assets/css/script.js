@@ -116,7 +116,7 @@ function specialcharacters(){
 }
 
 function reset(){
-if(confirm("Do you want to continue?") == true);
+if(confirm("Do you want to reset?") == true);
   {
   var randomGenerator = [];
   i = 0;
