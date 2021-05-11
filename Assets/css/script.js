@@ -46,7 +46,7 @@ function creation(){
 
 function howLong()
 {
-    i = prompt("How long do you want your password");
+    i = prompt("How long do you want your password?");
     if(i < 8 || i > 128)
     {
       alert("Must be 8 - 128 characters long");
