@@ -23,11 +23,12 @@ function btnPress(){
   //console.log(pass.toString())
   //console.log(randomGenerator.toString())
   console.log("Password at the end: " + pass.toString());
+  console.log(pass.join(""))
 }
 
 function creation(){
   for(var j = 0; j < i; j++){
-    var x = randomGenerator[Math.floor(Math.random() * i)]; 
+    var x = randomGenerator[Math.floor(Math.random() * randomGenerator.length)]; 
     //console.log("My numbers/ letters are: " + x)
     pass.push(x);
   }
