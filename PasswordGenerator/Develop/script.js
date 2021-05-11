@@ -4,17 +4,24 @@ var generateBtn = document.querySelector("#generate");
 var randomGenerator = [];
 var pass = [];
 var i;
+var counter = 0;
 
 // Write password to the #password input
 function writePassword() {
+  if(counter == 0)
+  {
   var password = generatePassword();
-  console.log("Password is: " + password);
-  var passwordText = document.querySelector("#password");
-  console.log("Passwordtext is: " + password);
-  passwordText.value = password;
-
-
+  //console.log("Password is: " + password);
+  var passwordText = document.querySelector("#password"); //select text
+  //console.log("Passwordtext is: " + password);
+  passwordText.value = password;  //changes text in the middle
+  counter++;
+  }
+  else{
+  reset();
+  }
 }
+
 function generatePassword(){
   howLong();
   lowercase();
@@ -109,11 +116,15 @@ function specialcharacters(){
 }
 
 function reset(){
-confirm("Do you want to continue?");
-  var generateBtn = document.querySelector("#generate");
+if(confirm("Do you want to continue?") == true);
+  {
   var randomGenerator = [];
-  var pass = [];
-  var i;
+  i = 0;
+  pass.length = 0
+  counter = 0;
+  generateBtn = document.querySelector("#generate");
+  writePassword();
+  }
 }
 
 
