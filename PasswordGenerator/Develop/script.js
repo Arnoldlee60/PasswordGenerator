@@ -2,6 +2,7 @@
 //lowercase, uppercase, numbers, special characters
 var generateBtn = document.querySelector("#generate");
 var randomGenerator = [];
+var pass = [];
 var i;
 
 // Write password to the #password input
@@ -18,10 +19,17 @@ function btnPress(){
   uppercase();
   numbers();
   specialcharacters();
+  creation();
+  console.log(randomGenerator.toString())
   //console.log(randomGenerator.toString())
   //console.log(i);
 }
 
+function creation(){
+  for(var j; j < i; j++){
+    pass.push(randomGenerator[Math.floor(Math.random() * i)]);
+  }
+}
 function howLong(){
 
     i = prompt("How long do you want your password");
