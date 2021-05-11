@@ -12,12 +12,28 @@ function writePassword() {
 
 }
 function btnPress(){
+  howLong();
   lowercase();
   uppercase();
   numbers();
   specialcharacters();
-  console.log(randomGenerator.toString())
+  //console.log(randomGenerator.toString())
 }
+
+function howLong(){
+
+    var i = prompt("How long do you want your password");
+    if(i < 8 || i > 128){
+      alert("Try again");
+      howLong();
+    }
+    else{
+      
+    }
+    
+}
+
+
 
 function lowercase(){
 if(confirm("Do you want lowercase letters?"))
@@ -51,8 +67,7 @@ function numbers(){
   if(confirm("Do you want special characters letters?"))
   {
     console.log("Yes")
-    randomGenerator.push(["!",'"',"#","$","%","^","&","'","*","(",")","*","+",",","-",".","/",":",";","<","?","@","[",
-                          "\\" , "]", "^","_","`","{", "|", "}", "~"]); // use \\ for one \
+    randomGenerator.push("1","2","3","4","5","6","7","8","9")
   }
   else
   {
@@ -64,6 +79,8 @@ function specialcharacters(){
   if(confirm("Do you want special characters letters?"))
   {
     console.log("Yes")
+    randomGenerator.push(["!",'"',"#","$","%","^","&","'","*","(",")","*","+",",","-",".","/",":",";","<","?","@","[",
+                          "\\" , "]", "^","_","`","{", "|", "}", "~"]); // use \\ for one \
   }
   else
   {
