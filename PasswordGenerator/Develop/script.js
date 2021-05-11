@@ -26,6 +26,7 @@ if(confirm("Do you want lowercase letters?"))
     randomGenerator.push(["a", "b", "c", "d", "e", "f", "g", "h",
      "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
       "u", "v", "w", "x", "y", "z"]);
+  }
   else
   {
     console.log("No")
