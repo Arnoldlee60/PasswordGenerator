@@ -51,6 +51,8 @@ function numbers(){
   if(confirm("Do you want special characters letters?"))
   {
     console.log("Yes")
+    randomGenerator.push(["!",'"',"#","$","%","^","&","'","*","(",")","*","+",",","-",".","/",":",";","<","?","@","[",
+                          "\\" , "]", "^","_","`","{", "|", "}", "~"]);
   }
   else
   {
