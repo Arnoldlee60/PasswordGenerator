@@ -5,6 +5,7 @@ var randomGenerator = [];
 var pass = [];
 var i;
 var counter = 0;
+var resetString = "Your Secure Password";
 
 // Write password to the #password input
 function writePassword() {
@@ -29,7 +30,7 @@ function generatePassword(){
   numbers();
   specialcharacters();
   creation();
-  return (pass.join(""));
+  return (pass.join("")); //Print out array with no comma
   //console.log(pass.toString())
   //console.log(randomGenerator.toString())
   //console.log("Password at the end: " + pass.toString()); //array value for password
@@ -119,11 +120,12 @@ function reset(){
 var reset = confirm("Do you want to reset?");
 if(reset == true)
   {
-  var randomGenerator = [];
+  randomGenerator = [];
   i = 0;
-  pass.length = 0
+  pass = [];
   counter = 0;
-  generateBtn = document.querySelector("#generate");
+  //generateBtn = document.querySelector("#generate");
+  //passwordText.value = resetString;
   writePassword();
   }
 }
