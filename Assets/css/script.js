@@ -65,7 +65,6 @@ if(confirm("Do you want lowercase letters?") == true)
     randomGenerator.push("a", "b", "c", "d", "e", "f", "g", "h",
      "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
       "u", "v", "w", "x", "y", "z");
-      
       //console.log("String so far: " + randomGenerator.toString());
   }
   else
@@ -85,7 +84,7 @@ function uppercase(){
   }
   else
   {
-    console.log("No uppercase letters")
+    //console.log("No uppercase letters")
   }
 }
 
@@ -98,7 +97,7 @@ function numbers(){
   }
   else
   {
-    console.log("No numbers")
+    //console.log("No numbers")
   }
 }
 
@@ -112,7 +111,7 @@ function specialcharacters(){
   }
   else
   {
-    console.log("No special letters")
+    //console.log("No special letters")
   }
 }
 
@@ -124,12 +123,15 @@ if(reset == true)
   i = 0;
   pass = [];
   counter = 0;
+  lowercaseCondition = null;
+  uppercaseCondtion = null;
+  numbersCondtion = null;
+  specialcharactersCondition = null;
   //generateBtn = document.querySelector("#generate");
   //passwordText.value = resetString;
   writePassword();
   }
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
